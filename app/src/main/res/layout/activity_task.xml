@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:foregroundGravity="center"
+    android:fitsSystemWindows="true"
+    tools:context=".TaskActivity">
+
+    <!-- Task Description -->
+
+    <TextView
+        android:id="@+id/task_state_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:fontWeight="600"
+        android:paddingBottom="30dp"
+        android:text="@string/task_status_label" />
+
+    <TextView
+        android:id="@+id/task_text_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:textSize="24sp"
+        android:text="@string/task_text_label" />
+
+    <!-- Start Date Description -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/task_start_label_text_view"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontWeight="700"
+            android:textSize="24sp"
+            android:text="@string/start_date_label2" />
+
+        <TextView
+            android:id="@+id/task_start_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="24sp"
+            android:text="@string/mm_dd_yyyy" />
+
+    </LinearLayout>
+
+    <!-- Due Date Description -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/task_due_label_text_view"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontWeight="600"
+            android:textSize="24sp"
+            android:text="@string/due_date_label" />
+
+        <TextView
+            android:id="@+id/task_due_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="24sp"
+            android:text="@string/mm_dd_yyyy" />
+
+    </LinearLayout>
+
+    <!-- Recurrence Description -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/recurrence_label_text_view"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textAlignment="center"
+            android:fontWeight="600"
+            android:textSize="24sp"
+            android:text="@string/repeats_every_label" />
+
+        <TextView
+            android:id="@+id/task_interval_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="@string/interval_label" />
+
+        <TextView
+            android:id="@+id/task_frequency_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:text="@string/task_frequency_label" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/skip_button"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="40dp"
+            android:background="@color/gray_200"
+            android:textColor="@color/black"
+            android:text="@string/skip_button_label"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/complete_button"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:background="@color/ready"
+            android:textColor="@color/black"
+            android:text="@string/complete_button_label"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context="com.lawson.taskapp.TaskEditActivity">
+
+    <!-- Task Text -->
+
+    <TextView
+        android:id="@+id/task_label_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/task_edit_text"
+        android:text="@string/task_text_label" />
+
+    <EditText
+        android:id="@+id/task_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/task_hint"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLines="5" />
+
+    <!-- Start Date -->
+
+    <TextView
+        android:id="@+id/start_date_label_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/start_date_edit_text"
+        android:text="@string/start_date_label" />
+
+    <EditText
+        android:id="@+id/start_date_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" /> <!-- need input mask -->
+
+    <!-- Duration -->
+
+    <TextView
+        android:id="@+id/duration_label_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/duration_edit_text"
+        android:text="@string/duration_label" />
+
+    <EditText
+        android:id="@+id/duration_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <!-- Recurrence Data -->
+
+    <TextView
+        android:id="@+id/frequency_label_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/interval_edit_text"
+        android:text="@string/frequency_label" />
+
+    <EditText
+        android:id="@+id/interval_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:id="@+id/frequency_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_button_daily"
+            android:onClick="rbclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/days_radio_label"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio_button_weekly"
+            android:onClick="rbclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weeks_radio_label"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/radio_button_monthly"
+            android:onClick="rbclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/months_radio_label"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/radio_button_yearly"
+            android:onClick="rbclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/years_radio_label"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:contentDescription="@string/save_button_text"
+        android:src="@drawable/check" />
+
+</LinearLayout>
